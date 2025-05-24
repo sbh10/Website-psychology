@@ -11,7 +11,9 @@ Ce site a pour but de présenter les services, la spécialité, les modalités d
 🍪 Accessibilité : éléments interactifs accessibles au clavier
 
 ---
+
 # 💻 Technologies utilisées
+
 HTML5 📄
 CSS3 🎨
 JavaScript (vanilla) ⚙️
@@ -19,5 +21,7 @@ Google Fonts - Montserrat 🖋️
 Ionicons pour les icônes 📦
 
 # 📷 Aperçu
+
+![Aperçu du site web] (assets\website-screenshot.png)
 
 # Merci pour la visite ! 🫶
