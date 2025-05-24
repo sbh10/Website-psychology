@@ -22,6 +22,6 @@ Ionicons pour les icônes 📦
 
 # 📷 Aperçu
 
-![Aperçu du site web] (assets\website-screenshot.png)
+![Aperçu du site web](assets\website-screenshot.png)
 
 # Merci pour la visite ! 🫶
