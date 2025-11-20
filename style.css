@@ -22,15 +22,25 @@ body {
   flex-direction: column; /* empile logo au dessus navbar */
   align-items: center;
 }
+
 .logo {
   text-align: center;
-  padding: 10px 0;
+  padding: 0;
 }
 .logo img {
-  max-height: 200px; /* ✅ Tu peux ajuster la taille ici */
-  height: auto;
-  width: auto;
+  max-height: 300px; /* ✅ Tu peux ajuster la taille ici */
+  width: 100%;
+  height: auto; /* garde les proportions */
 }
+
+.header-text {
+  font-size: 24px;
+  color: #4a4a4a;
+  text-align: center;
+  padding: 0px 10px 10px; /* petit espace propre */
+  max-width: 900px;
+}
+
 /* Navbar */
 
 nav {
@@ -39,11 +49,7 @@ nav {
   z-index: 1000;
   padding: 10px 0;
 }
-img {
-  max-width: 100%;
-  height: auto;
-  display: block; /* éviter espaces blancs sous images */
-}
+
 nav ul {
   list-style: none;
   text-align: center;
@@ -60,7 +66,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   transition: color 0.3s;
 }
 
@@ -84,7 +90,7 @@ section:nth-child(odd) {
 
 /* appliquer un décalage uniquement à la première section */
 section:first-of-type {
-  margin-top: 250px;
+  margin-top: 390px;
 }
 .section-content {
   display: flex;
@@ -109,7 +115,7 @@ section:first-of-type {
   border-radius: 8px;
 }
 h1 {
-  font-size: 28px;
+  font-size: 24px;
 }
 h1,
 h2 {
@@ -125,26 +131,6 @@ p {
   margin: 20px auto;
 }
 
-/* Bouton de prise de rendez-vous */
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #c2e0e2;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  color: #4a4a4a;
-}
-
-/* Accessibilité et responsivité */
-
 a,
 .btn {
   outline: none;
@@ -154,12 +140,6 @@ a:focus,
 .btn:focus {
   color: #4a4a4a;
   font-weight: bold;
-}
-
-.btn-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
 }
 
 .burger {
@@ -191,16 +171,34 @@ ion-icon:hover {
   background-color: #c2e0e2;
   border-radius: 50%;
 }
-.doctolib-logo {
-  height: 55px; /* pour être aligné avec les icônes Ionicons */
-  width: auto;
-  padding: 0.5rem;
-  cursor: pointer;
+
+.doctolib-wrapper {
+  text-align: center;
+  margin-top: 50px;
 }
 
+.doctolib-wrapper img.doctolib-logo {
+  height: 55px;
+  width: auto;
+}
 /* Media Queries pour la responsivité */
 
 @media (max-width: 768px) {
+  .fixed-header .logo img {
+    max-height: 150px;
+    width: auto;
+  }
+
+  .fixed-header .header-text {
+    margin: 0;
+    padding: 2px 0;
+  }
+
+  /* Ajuster la marge de la première section pour compenser le header fixe */
+  section:first-of-type {
+    margin-top: 280px;
+  }
+
   .section-content {
     flex-direction: column;
     text-align: center;
@@ -253,5 +251,22 @@ ion-icon:hover {
 
   .btn {
     font-size: 16px;
+  }
+  .icon-container {
+    flex-direction: row; /* reste en ligne */
+    flex-wrap: wrap; /* passe à la ligne si besoin */
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  ion-icon {
+    font-size: 38px;
+    padding: 0.4rem;
+  }
+
+  .doctolib-wrapper img.doctolib-logo {
+    height: 38px;
   }
 }
