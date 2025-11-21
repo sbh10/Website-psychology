@@ -8,7 +8,7 @@ if (burger && navUl) {
     navUl.classList.toggle("active");
   });
 
-  // Fermer le menu si on clique en dehors
+  // Fermer le menu si on clique en dehors du menu
   document.addEventListener("click", (e) => {
     const target = e.target;
     if (
