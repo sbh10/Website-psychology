@@ -1,13 +1,9 @@
-html {
-  scroll-padding-top: 250px; /* ajuste à la hauteur réelle de ton header */
-}
 body {
   margin: 0 auto;
-  padding: 0;
+  padding-top: 310px;
   background-color: #fafafa;
   color: #4a4a4a;
   font-family: "Montserrat", sans-serif;
-  color: #4a4a4a;
   max-width: 1200px;
 }
 .fixed-header {
@@ -28,19 +24,23 @@ body {
   padding: 0;
 }
 .logo img {
-  max-height: 300px; /* ✅ Tu peux ajuster la taille ici */
+  max-height: 150px; /* ✅ Tu peux ajuster la taille ici */
   width: 100%;
   height: auto; /* garde les proportions */
 }
 
-.header-text {
-  font-size: 24px;
-  color: #4a4a4a;
+.header-letter {
   text-align: center;
-  padding: 0px 10px 10px; /* petit espace propre */
+  padding: 0px;
   max-width: 900px;
+  font-weight: 400;
+  font-size: 26px;
 }
 
+.p-header-letter {
+  font-weight: 400;
+  font-size: 20px;
+}
 /* Navbar */
 
 nav {
@@ -66,7 +66,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
   transition: color 0.3s;
 }
 
@@ -82,16 +82,13 @@ section {
   padding: 20px 20px;
   background-color: #fff;
   box-sizing: border-box;
+  scroll-margin-top: 310px;
 }
 
 section:nth-child(odd) {
   background-color: #f2f2f2;
 }
 
-/* appliquer un décalage uniquement à la première section */
-section:first-of-type {
-  margin-top: 390px;
-}
 .section-content {
   display: flex;
   align-items: center;
@@ -115,7 +112,7 @@ section:first-of-type {
   border-radius: 8px;
 }
 h1 {
-  font-size: 24px;
+  font-size: 20px;
 }
 h1,
 h2 {
@@ -125,7 +122,7 @@ h2 {
 
 p {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   color: #4a4a4a;
   max-width: 800px;
   margin: 20px auto;
@@ -147,7 +144,7 @@ a:focus,
 }
 .italic-letter {
   font-style: italic;
-  font-size: 32px;
+  font-size: 26px;
   font-family: "Merriweather Sans", sans-serif;
 }
 
@@ -164,7 +161,7 @@ a:focus,
 ion-icon {
   padding: 0.5rem;
   color: #4a4a4a;
-  font-size: 55px;
+  font-size: 30px;
   cursor: pointer;
 }
 ion-icon:hover {
@@ -174,29 +171,42 @@ ion-icon:hover {
 
 .doctolib-wrapper {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .doctolib-wrapper img.doctolib-logo {
-  height: 55px;
+  height: 35px;
   width: auto;
+}
+
+.faq-answer {
+  display: none; /* caché par défaut */
+  margin-top: 5px;
+  color: #555;
+}
+
+.faq-question {
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.faq-question:hover {
+  color: #7a4deb;
 }
 /* Media Queries pour la responsivité */
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 280px;
+  }
   .fixed-header .logo img {
-    max-height: 150px;
+    max-height: 130px;
     width: auto;
   }
 
   .fixed-header .header-text {
     margin: 0;
-    padding: 2px 0;
-  }
-
-  /* Ajuster la marge de la première section pour compenser le header fixe */
-  section:first-of-type {
-    margin-top: 280px;
+    padding: 0;
   }
 
   .section-content {
@@ -238,20 +248,23 @@ ion-icon:hover {
     user-select: none;
   }
   section {
-    scroll-margin-top: 250px;
+    scroll-margin-top: 280px;
   }
 
   h1 {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   p {
     font-size: 16px;
   }
-
-  .btn {
-    font-size: 16px;
+  .italic-letter {
+    font-size: 24px;
   }
+  .header-letter {
+    font-size: 22px;
+  }
+
   .icon-container {
     flex-direction: row; /* reste en ligne */
     flex-wrap: wrap; /* passe à la ligne si besoin */
@@ -262,11 +275,11 @@ ion-icon:hover {
   }
 
   ion-icon {
-    font-size: 38px;
+    font-size: 28px;
     padding: 0.4rem;
   }
 
   .doctolib-wrapper img.doctolib-logo {
-    height: 38px;
+    height: 28px;
   }
 }
