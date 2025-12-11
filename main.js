@@ -45,3 +45,20 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+// ========== FAQ TOGGLE ==========
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach((question) => {
+  question.addEventListener("click", () => {
+    const answer = question.nextElementSibling;
+    // Vérifie que c'est bien un HTMLElement et que c'est la bonne classe
+    if (
+      answer instanceof HTMLElement &&
+      answer.classList.contains("faq-answer")
+    ) {
+      answer.style.display =
+        answer.style.display === "block" ? "none" : "block";
+    }
+  });
+});

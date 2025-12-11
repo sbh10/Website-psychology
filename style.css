@@ -1,6 +1,6 @@
 body {
   margin: 0 auto;
-  padding-top: 310px;
+  padding-top: 250px; /*à adapter en hauteur pour maintenir la 1ère section juste en dessous de la navbar*/
   background-color: #fafafa;
   color: #4a4a4a;
   font-family: "Montserrat", sans-serif;
@@ -19,12 +19,20 @@ body {
   align-items: center;
 }
 
+.header-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px; /* espace entre logo et texte */
+  margin-top: 10px;
+}
+
 .logo {
   text-align: center;
   padding: 0;
 }
 .logo img {
-  max-height: 150px; /* ✅ Tu peux ajuster la taille ici */
+  max-height: 200px; /* ✅ Tu peux ajuster la taille ici */
   width: 100%;
   height: auto; /* garde les proportions */
 }
@@ -40,6 +48,10 @@ body {
 .p-header-letter {
   font-weight: 400;
   font-size: 20px;
+}
+
+.header-name {
+  font-weight: 600;
 }
 
 /* Navbar */
@@ -83,7 +95,7 @@ section {
   padding: 20px 20px;
   background-color: #fff;
   box-sizing: border-box;
-  scroll-margin-top: 310px;
+  scroll-margin-top: 250px; /*à adapter en hauteur pour maintenir la 1ère section juste en dessous de la navbar*/
 }
 
 section:nth-child(odd) {
@@ -184,6 +196,8 @@ ion-icon:hover {
   display: none; /* caché par défaut */
   margin-top: 5px;
   color: #555;
+  font-size: 13px;
+  font-style: italic;
 }
 
 .faq-question {
@@ -198,7 +212,7 @@ ion-icon:hover {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 280px;
+    padding-top: 180px;
   }
   .fixed-header .logo img {
     max-height: 130px;
@@ -207,9 +221,13 @@ ion-icon:hover {
 
   .fixed-header .header-text {
     margin: 0;
-    padding: 0;
+    padding: 1800;
   }
-
+  .header-top {
+    gap: 10px; /* réduit l'espace entre logo et texte sur mobile */
+    flex-direction: row; /* optionnel : si tu veux que le texte passe sous le logo */
+    align-items: center;
+  }
   .section-content {
     flex-direction: column;
     text-align: center;
@@ -249,7 +267,7 @@ ion-icon:hover {
     user-select: none;
   }
   section {
-    scroll-margin-top: 280px;
+    scroll-margin-top: 180px;
   }
 
   h1 {
@@ -260,10 +278,17 @@ ion-icon:hover {
     font-size: 16px;
   }
   .italic-letter {
-    font-size: 24px;
+    font-size: 20px;
   }
   .header-letter {
-    font-size: 22px;
+    font-size: 20px;
+  }
+  .header-name {
+    font-size: 20px;
+  }
+
+  .p-header-letter {
+    font-size: 14px;
   }
 
   .icon-container {
